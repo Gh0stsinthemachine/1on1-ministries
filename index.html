@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1:1 Ministries — Every Child Matters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #F5F0E8;
+      --offwhite: #FDFAF4;
+      --teal:     #1A4D5C;
+      --teal-light: #2A6878;
+      --gold:     #C89560;
+      --sage:     #A8C4BC;
+      --coral:    #C65455;
+      --dark:     #2F2F2F;
+      --mid:      #5A5A5A;
+      --border:   #DDD5C5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--dark);
+      line-height: 1.65;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 60px;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--sage);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: var(--teal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(168,196,188,0.12) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(200,149,96,0.08) 0%, transparent 50%);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--sage);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #b07e48;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* ── SECTION COMMON ── */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-body {
+      font-size: 1.05rem;
+      color: var(--mid);
+      max-width: 620px;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--offwhite);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-icon {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 340px;
+      border-radius: 8px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+    }
+
+    .about-stat {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.95rem;
+      color: var(--mid);
+      font-style: italic;
+    }
+
+    /* ── DONATE ── */
+    #donate {
+      background: var(--cream);
+    }
+
+    .donate-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .donate-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .donate-card:hover {
+      box-shadow: 0 8px 28px rgba(26,77,92,0.1);
+      transform: translateY(-2px);
+    }
+
+    .donate-card .amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .donate-card .impact {
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin: 0.5rem 0 1.25rem;
+    }
+
+    .donate-card.featured {
+      border-color: var(--gold);
+      background: var(--teal);
+    }
+
+    .donate-card.featured .amount,
+    .donate-card.featured .impact {
+      color: var(--sage);
+    }
+
+    .donate-card.featured .amount {
+      color: var(--gold);
+    }
+
+    .donate-custom {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .donate-custom input {
+      flex: 1;
+      min-width: 160px;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .donate-custom input:focus {
+      border-color: var(--teal);
+    }
+
+    .donate-note {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--mid);
+    }
+
+    .donate-note a {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .donate-note a:hover { text-decoration: underline; }
+
+    /* ── HOW TO HELP ── */
+    #help {
+      background: var(--offwhite);
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .help-card {
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+    }
+
+    .help-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .help-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .help-card p {
+      font-size: 0.9rem;
+      color: var(--mid);
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--teal);
+      text-align: center;
+    }
+
+    #contact .section-title {
+      color: #fff;
+    }
+
+    #contact .section-eyebrow {
+      color: var(--gold);
+    }
+
+    .contact-body {
+      color: var(--sage);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .contact-phone {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .contact-phone:hover { color: #fff; }
+
+    .contact-name {
+      font-size: 0.9rem;
+      color: var(--sage);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0f2d38;
+      color: rgba(168,196,188,0.6);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.8rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-icon { max-width: 200px; margin: 0 auto; }
+      .btn-outline { margin-left: 0; margin-top: 0.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      section { padding: 4rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-brand" href="#hero">1:1 Ministries</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#donate">Give</a></li>
+      <li><a href="#help">Help</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">Faith · Community · Children</p>
+    <h1 class="hero-title">One Child.<br /><span>One Life.</span><br />One Mission.</h1>
+    <p class="hero-sub">1:1 Ministries exists to walk alongside children in need — offering love, stability, and hope one relationship at a time.</p>
+    <div class="hero-cta">
+      <a href="#donate" class="btn btn-primary">Give Now</a>
+      <a href="#about" class="btn btn-outline">Our Story</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-icon">🕊️</div>
+        <div>
+          <p class="section-eyebrow">Who We Are</p>
+          <h2 class="section-title">Built on the belief that every child deserves to be seen.</h2>
+          <p class="section-body">
+            1:1 Ministries is led by Diana, whose heart has always been with children facing hardship. We meet kids and families where they are — with resources, relationships, and real presence. No child should face uncertainty alone. Our work is personal, one-to-one, because that's how lives change.
+          </p>
+          <div class="about-stat">
+            "The name says everything. One ministry to one child. That's where transformation starts." — Diana
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate">
+    <div class="container">
+      <p class="section-eyebrow">Give</p>
+      <h2 class="section-title">Your generosity changes a child's story.</h2>
+      <p class="section-body">Every dollar goes directly to supporting children and families in need. No overhead games — just impact.</p>
+
+      <div class="donate-cards">
+        <div class="donate-card">
+          <div class="amount">$25</div>
+          <div class="impact">Provides essentials for a child for one week</div>
+          <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $25</a>
+        </div>
+        <div class="donate-card featured">
+          <div class="amount">$50</div>
+          <div class="impact" style="color: rgba(168,196,188,0.8)">Covers clothing or school supplies for a child</div>
+          <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $50</a>
+        </div>
+        <div class="donate-card">
+          <div class="amount">$100</div>
+          <div class="impact">Monthly support for one child's core needs</div>
+          <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $100</a>
+        </div>
+      </div>
+
+      <p class="donate-note">
+        Ready to give a custom amount or set up recurring support? Call or text Diana directly at
+        <a href="tel:9088874005">(908) 887-4005</a> — she'll walk you through the options personally.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP -->
+  <section id="help">
+    <div class="container">
+      <p class="section-eyebrow">How to Help</p>
+      <h2 class="section-title">There's more than one way to make a difference.</h2>
+      <p class="section-body">Whether you can give time, treasure, or talent — there's a place for you in this work.</p>
+
+      <div class="help-grid">
+        <div class="help-card">
+          <div class="help-icon">🤲</div>
+          <h3>Donate</h3>
+          <p>Financial gifts of any size directly fund resources, supplies, and care for children in need.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">📦</div>
+          <h3>Donate Goods</h3>
+          <p>Clothing, school supplies, hygiene products, and household items are always welcome. Contact us to arrange a drop-off.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🙌</div>
+          <h3>Volunteer</h3>
+          <p>Give your time. Whether it's organizing drives, running errands, or showing up — your presence matters.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">📣</div>
+          <h3>Spread the Word</h3>
+          <p>Share our mission with your network. The more people who know, the more children we can reach.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🙏</div>
+          <h3>Pray With Us</h3>
+          <p>We believe prayer moves mountains. Join us in lifting up the children and families we serve.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">📞</div>
+          <h3>Just Call</h3>
+          <p>Not sure how to help? Call Diana. She'll find the right fit for your gifts, time, and heart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">We'd love to hear from you.</h2>
+      <p class="contact-body">Questions, donations, partnership ideas — Diana is the right person to talk to. Reach out directly.</p>
+      <a href="tel:9088874005" class="contact-phone">(908) 887-4005</a>
+      <p class="contact-name">Diana · 1:1 Ministries</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 1:1 Ministries. All rights reserved. Built with faith and purpose.</p>
+  </footer>
+
+</body>
+</html>
