@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1:1 Ministries — Every Child Matters</title>
+  <title>1:1 Ministries — No One Should Age Out Alone</title>
+  <meta name="description" content="1:1 Ministries walks alongside foster youth aging out of the system — teaching life skills, offering mentorship, and making sure no one faces adulthood alone." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -105,7 +106,7 @@
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 8vw, 6rem);
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
       font-weight: 700;
       color: #fff;
       line-height: 1.1;
@@ -113,14 +114,12 @@
       position: relative;
     }
 
-    .hero-title span {
-      color: var(--gold);
-    }
+    .hero-title span { color: var(--gold); }
 
     .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       color: var(--sage);
-      max-width: 560px;
+      max-width: 580px;
       margin-bottom: 2.5rem;
       position: relative;
     }
@@ -168,10 +167,36 @@
       position: relative;
     }
 
-    /* ── SECTION COMMON ── */
-    section {
-      padding: 5rem 2rem;
+    /* ── STAT STRIP ── */
+    .stat-strip {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem;
     }
+
+    .stat-strip .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .stat-item .label {
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-top: 0.25rem;
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 5rem 2rem; }
 
     .container {
       max-width: 900px;
@@ -199,13 +224,11 @@
     .section-body {
       font-size: 1.05rem;
       color: var(--mid);
-      max-width: 620px;
+      max-width: 640px;
     }
 
     /* ── ABOUT ── */
-    #about {
-      background: var(--offwhite);
-    }
+    #about { background: var(--offwhite); }
 
     .about-grid {
       display: grid;
@@ -238,10 +261,45 @@
       font-style: italic;
     }
 
-    /* ── DONATE ── */
-    #donate {
-      background: var(--cream);
+    /* ── SKILLS ── */
+    #skills { background: var(--cream); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
     }
+
+    .skill-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 8px 28px rgba(26,77,92,0.08);
+      transform: translateY(-2px);
+    }
+
+    .skill-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+
+    .skill-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--teal);
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-card p {
+      font-size: 0.85rem;
+      color: var(--mid);
+    }
+
+    /* ── DONATE ── */
+    #donate { background: var(--offwhite); }
 
     .donate-cards {
       display: grid;
@@ -282,38 +340,8 @@
       background: var(--teal);
     }
 
-    .donate-card.featured .amount,
-    .donate-card.featured .impact {
-      color: var(--sage);
-    }
-
-    .donate-card.featured .amount {
-      color: var(--gold);
-    }
-
-    .donate-custom {
-      margin-top: 1.5rem;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .donate-custom input {
-      flex: 1;
-      min-width: 160px;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 4px;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .donate-custom input:focus {
-      border-color: var(--teal);
-    }
+    .donate-card.featured .amount { color: var(--gold); }
+    .donate-card.featured .impact { color: rgba(168,196,188,0.85); }
 
     .donate-note {
       margin-top: 1.5rem;
@@ -329,10 +357,8 @@
 
     .donate-note a:hover { text-decoration: underline; }
 
-    /* ── HOW TO HELP ── */
-    #help {
-      background: var(--offwhite);
-    }
+    /* ── HELP ── */
+    #help { background: var(--cream); }
 
     .help-grid {
       display: grid;
@@ -344,14 +370,11 @@
     .help-card {
       padding: 2rem 1.5rem;
       border-radius: 8px;
-      background: var(--cream);
+      background: #fff;
       border: 1px solid var(--border);
     }
 
-    .help-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+    .help-icon { font-size: 2rem; margin-bottom: 1rem; }
 
     .help-card h3 {
       font-family: 'Playfair Display', serif;
@@ -360,10 +383,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .help-card p {
-      font-size: 0.9rem;
-      color: var(--mid);
-    }
+    .help-card p { font-size: 0.9rem; color: var(--mid); }
 
     /* ── CONTACT ── */
     #contact {
@@ -371,13 +391,8 @@
       text-align: center;
     }
 
-    #contact .section-title {
-      color: #fff;
-    }
-
-    #contact .section-eyebrow {
-      color: var(--gold);
-    }
+    #contact .section-title { color: #fff; }
+    #contact .section-eyebrow { color: var(--gold); }
 
     .contact-body {
       color: var(--sage);
@@ -398,12 +413,7 @@
     }
 
     .contact-phone:hover { color: #fff; }
-
-    .contact-name {
-      font-size: 0.9rem;
-      color: var(--sage);
-      letter-spacing: 0.08em;
-    }
+    .contact-name { font-size: 0.9rem; color: var(--sage); letter-spacing: 0.08em; }
 
     /* ── FOOTER ── */
     footer {
@@ -435,6 +445,7 @@
     <a class="nav-brand" href="#hero">1:1 Ministries</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">What We Teach</a></li>
       <li><a href="#donate">Give</a></li>
       <li><a href="#help">Help</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -443,29 +454,103 @@
 
   <!-- HERO -->
   <section id="hero">
-    <p class="hero-eyebrow">Faith · Community · Children</p>
-    <h1 class="hero-title">One Child.<br /><span>One Life.</span><br />One Mission.</h1>
-    <p class="hero-sub">1:1 Ministries exists to walk alongside children in need — offering love, stability, and hope one relationship at a time.</p>
+    <p class="hero-eyebrow">Faith · Mentorship · Foster Youth</p>
+    <h1 class="hero-title">Nobody Should<br />Learn to <span>Adult</span><br />Alone.</h1>
+    <p class="hero-sub">Every year, thousands of foster youth turn 18 and the system walks away. 1:1 Ministries doesn't. We walk alongside them — teaching the life skills nobody ever taught them.</p>
     <div class="hero-cta">
-      <a href="#donate" class="btn btn-primary">Give Now</a>
+      <a href="#donate" class="btn btn-primary">Support the Work</a>
       <a href="#about" class="btn btn-outline">Our Story</a>
     </div>
   </section>
+
+  <!-- STATS -->
+  <div class="stat-strip">
+    <div class="container">
+      <div class="stat-item">
+        <div class="number">20,000+</div>
+        <div class="label">foster youth age out every year in the U.S.</div>
+      </div>
+      <div class="stat-item">
+        <div class="number">1 in 5</div>
+        <div class="label">will experience homelessness after aging out</div>
+      </div>
+      <div class="stat-item">
+        <div class="number">50%</div>
+        <div class="label">will be unemployed by age 24</div>
+      </div>
+      <div class="stat-item">
+        <div class="number">1:1</div>
+        <div class="label">the ratio that actually changes outcomes</div>
+      </div>
+    </div>
+  </div>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-icon">🕊️</div>
+        <div class="about-icon">🌱</div>
         <div>
           <p class="section-eyebrow">Who We Are</p>
-          <h2 class="section-title">Built on the belief that every child deserves to be seen.</h2>
+          <h2 class="section-title">The system has an exit. We don't.</h2>
           <p class="section-body">
-            1:1 Ministries is led by Diana, whose heart has always been with children facing hardship. We meet kids and families where they are — with resources, relationships, and real presence. No child should face uncertainty alone. Our work is personal, one-to-one, because that's how lives change.
+            1:1 Ministries was founded by Diana with one conviction: no young person should have to figure out adulthood without someone in their corner. Foster youth aging out of the system face a cliff — no family safety net, no roadmap, no one to call when life gets complicated. We exist to be that someone. We mentor, we teach, we show up — one person to one person, for as long as it takes.
           </p>
           <div class="about-stat">
-            "The name says everything. One ministry to one child. That's where transformation starts." — Diana
+            "The system gave them a birthday and called it independence. We call it a starting line — and we'll be there." — Diana
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE TEACH -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-eyebrow">What We Teach</p>
+      <h2 class="section-title">The things most of us learned at home.</h2>
+      <p class="section-body">Foster youth age out knowing how to survive the system. We teach them how to thrive outside it — the real-world skills that no one covered in school.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">💰</div>
+          <h3>Money & Budgeting</h3>
+          <p>Opening a bank account, building credit, paying bills, avoiding debt traps.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🏠</div>
+          <h3>Finding Housing</h3>
+          <p>How to rent an apartment, understand a lease, and know your rights as a tenant.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💼</div>
+          <h3>Getting a Job</h3>
+          <p>Résumés, interviews, workplace expectations — and how to keep the job once you have it.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🏥</div>
+          <h3>Healthcare Navigation</h3>
+          <p>Insurance basics, how to make a doctor's appointment, and when to use the ER vs. urgent care.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🍳</div>
+          <h3>Food & Cooking</h3>
+          <p>Meal planning, grocery shopping on a budget, and basic cooking that doesn't require a culinary degree.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📋</div>
+          <h3>Life Admin</h3>
+          <p>Taxes, IDs, benefits, government paperwork — navigating the bureaucracy of being an adult.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤝</div>
+          <h3>Relationships & Conflict</h3>
+          <p>Healthy communication, setting boundaries, and building a support network that lasts.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🙏</div>
+          <h3>Faith & Purpose</h3>
+          <p>Rooted in faith, open to all. We walk with young people as they discover who they are and what they're here for.</p>
         </div>
       </div>
     </div>
@@ -475,30 +560,30 @@
   <section id="donate">
     <div class="container">
       <p class="section-eyebrow">Give</p>
-      <h2 class="section-title">Your generosity changes a child's story.</h2>
-      <p class="section-body">Every dollar goes directly to supporting children and families in need. No overhead games — just impact.</p>
+      <h2 class="section-title">Invest in someone's first chapter.</h2>
+      <p class="section-body">Your gift directly funds mentorship time, resources, and the practical tools foster youth need to build a stable, independent life.</p>
 
       <div class="donate-cards">
         <div class="donate-card">
           <div class="amount">$25</div>
-          <div class="impact">Provides essentials for a child for one week</div>
+          <div class="impact">Covers workbooks and supplies for one life skills session</div>
           <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $25</a>
         </div>
         <div class="donate-card featured">
           <div class="amount">$50</div>
-          <div class="impact" style="color: rgba(168,196,188,0.8)">Covers clothing or school supplies for a child</div>
+          <div class="impact">Funds one month of one-to-one mentorship support</div>
           <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $50</a>
         </div>
         <div class="donate-card">
           <div class="amount">$100</div>
-          <div class="impact">Monthly support for one child's core needs</div>
+          <div class="impact">Provides emergency essentials when a young adult hits a crisis</div>
           <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $100</a>
         </div>
       </div>
 
       <p class="donate-note">
-        Ready to give a custom amount or set up recurring support? Call or text Diana directly at
-        <a href="tel:9088874005">(908) 887-4005</a> — she'll walk you through the options personally.
+        Want to give a custom amount, set up recurring giving, or donate goods?<br />
+        Call or text Diana directly at <a href="tel:9088874005">(908) 887-4005</a> — she'll make it easy.
       </p>
     </div>
   </section>
@@ -507,39 +592,39 @@
   <section id="help">
     <div class="container">
       <p class="section-eyebrow">How to Help</p>
-      <h2 class="section-title">There's more than one way to make a difference.</h2>
-      <p class="section-body">Whether you can give time, treasure, or talent — there's a place for you in this work.</p>
+      <h2 class="section-title">You don't have to be a professional to change a life.</h2>
+      <p class="section-body">There's more than one way to show up for a young person who has never had someone in their corner. Find yours.</p>
 
       <div class="help-grid">
         <div class="help-card">
-          <div class="help-icon">🤲</div>
-          <h3>Donate</h3>
-          <p>Financial gifts of any size directly fund resources, supplies, and care for children in need.</p>
+          <div class="help-icon">💛</div>
+          <h3>Become a Mentor</h3>
+          <p>Be the one consistent adult in someone's life. No special credentials required — just reliability, patience, and a willingness to show up.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🎓</div>
+          <h3>Share Your Expertise</h3>
+          <p>Are you in finance, HR, healthcare, or trades? Teach a workshop. Your everyday knowledge is transformative to someone starting from zero.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">📦</div>
           <h3>Donate Goods</h3>
-          <p>Clothing, school supplies, hygiene products, and household items are always welcome. Contact us to arrange a drop-off.</p>
+          <p>Household basics, work clothes, kitchen supplies, hygiene products. The things you take for granted are often the things they've never had.</p>
         </div>
         <div class="help-card">
-          <div class="help-icon">🙌</div>
-          <h3>Volunteer</h3>
-          <p>Give your time. Whether it's organizing drives, running errands, or showing up — your presence matters.</p>
+          <div class="help-icon">💰</div>
+          <h3>Give Financially</h3>
+          <p>Every dollar funds mentorship, materials, and emergency support. Direct, transparent, and all going to the work.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">📣</div>
           <h3>Spread the Word</h3>
-          <p>Share our mission with your network. The more people who know, the more children we can reach.</p>
+          <p>Tell someone. Share this page. The biggest barrier to these young people getting help is that most people don't know this gap exists.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">🙏</div>
           <h3>Pray With Us</h3>
-          <p>We believe prayer moves mountains. Join us in lifting up the children and families we serve.</p>
-        </div>
-        <div class="help-card">
-          <div class="help-icon">📞</div>
-          <h3>Just Call</h3>
-          <p>Not sure how to help? Call Diana. She'll find the right fit for your gifts, time, and heart.</p>
+          <p>We believe prayer is foundational. Lift up the young people navigating the hardest transition of their lives — and the community walking with them.</p>
         </div>
       </div>
     </div>
@@ -549,8 +634,8 @@
   <section id="contact">
     <div class="container">
       <p class="section-eyebrow">Get In Touch</p>
-      <h2 class="section-title">We'd love to hear from you.</h2>
-      <p class="contact-body">Questions, donations, partnership ideas — Diana is the right person to talk to. Reach out directly.</p>
+      <h2 class="section-title">Ready to get involved?</h2>
+      <p class="contact-body">Whether you want to give, mentor, volunteer, or just learn more — Diana would love to talk. Reach out directly.</p>
       <a href="tel:9088874005" class="contact-phone">(908) 887-4005</a>
       <p class="contact-name">Diana · 1:1 Ministries</p>
     </div>
@@ -558,7 +643,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 1:1 Ministries. All rights reserved. Built with faith and purpose.</p>
+    <p>© 2026 1:1 Ministries. All rights reserved. Walking alongside foster youth, one relationship at a time.</p>
   </footer>
 
 </body>
