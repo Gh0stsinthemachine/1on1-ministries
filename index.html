@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1:1 Ministries — No One Should Age Out Alone</title>
-  <meta name="description" content="1:1 Ministries walks alongside foster youth aging out of the system — teaching life skills, offering mentorship, and making sure no one faces adulthood alone." />
+  <title>1:1 Ministries — A Home. A Future. A Foundation.</title>
+  <meta name="description" content="1:1 Ministries is building 25 tiny homes and a guidance center to walk alongside foster youth aging out of the system — giving them housing, life skills, and the support to build a real future." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -14,7 +14,6 @@
       --cream:    #F5F0E8;
       --offwhite: #FDFAF4;
       --teal:     #1A4D5C;
-      --teal-light: #2A6878;
       --gold:     #C89560;
       --sage:     #A8C4BC;
       --coral:    #C65455;
@@ -32,7 +31,7 @@
       line-height: 1.65;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -56,14 +55,14 @@
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.75rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--sage);
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -72,7 +71,7 @@
 
     .nav-links a:hover { color: #fff; }
 
-    /* ── HERO ── */
+    /* HERO */
     #hero {
       min-height: 100vh;
       background: var(--teal);
@@ -90,14 +89,15 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 60% 40%, rgba(168,196,188,0.12) 0%, transparent 65%),
-                  radial-gradient(ellipse at 20% 80%, rgba(200,149,96,0.08) 0%, transparent 50%);
+      background:
+        radial-gradient(ellipse at 65% 35%, rgba(168,196,188,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 75%, rgba(200,149,96,0.09) 0%, transparent 50%);
     }
 
     .hero-eyebrow {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 1.25rem;
@@ -117,9 +117,9 @@
     .hero-title span { color: var(--gold); }
 
     .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
       color: var(--sage);
-      max-width: 580px;
+      max-width: 600px;
       margin-bottom: 2.5rem;
       position: relative;
     }
@@ -137,15 +137,8 @@
       border: none;
     }
 
-    .btn-primary {
-      background: var(--gold);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #b07e48;
-      transform: translateY(-1px);
-    }
+    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-primary:hover { background: #b07e48; transform: translateY(-1px); }
 
     .btn-outline {
       background: transparent;
@@ -154,20 +147,11 @@
       margin-left: 1rem;
     }
 
-    .btn-outline:hover {
-      border-color: #fff;
-      background: rgba(255,255,255,0.06);
-    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
 
-    .hero-cta {
-      display: flex;
-      gap: 0;
-      flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-    }
+    .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0; position: relative; }
 
-    /* ── STAT STRIP ── */
+    /* STAT STRIP */
     .stat-strip {
       background: var(--cream);
       border-top: 1px solid var(--border);
@@ -175,7 +159,9 @@
       padding: 2.5rem 2rem;
     }
 
-    .stat-strip .container {
+    .stat-strip .inner {
+      max-width: 900px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 2rem;
@@ -190,23 +176,20 @@
     }
 
     .stat-item .label {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--mid);
       margin-top: 0.25rem;
     }
 
-    /* ── SECTION COMMON ── */
+    /* SECTIONS */
     section { padding: 5rem 2rem; }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    .container { max-width: 900px; margin: 0 auto; }
 
-    .section-eyebrow {
+    .eyebrow {
       font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 0.75rem;
@@ -227,7 +210,7 @@
       max-width: 640px;
     }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     #about { background: var(--offwhite); }
 
     .about-grid {
@@ -240,17 +223,17 @@
     .about-icon {
       width: 100%;
       aspect-ratio: 1;
-      max-width: 340px;
+      max-width: 320px;
       border-radius: 8px;
       background: var(--cream);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 6rem;
+      font-size: 5.5rem;
     }
 
-    .about-stat {
+    .about-quote {
       margin-top: 2rem;
       padding: 1.25rem 1.5rem;
       background: var(--cream);
@@ -261,7 +244,64 @@
       font-style: italic;
     }
 
-    /* ── SKILLS ── */
+    /* VISION — TINY HOMES */
+    #vision { background: var(--teal); }
+
+    #vision .section-title { color: #fff; }
+    #vision .eyebrow { color: var(--gold); }
+    #vision .section-body { color: var(--sage); max-width: 660px; }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .vision-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(168,196,188,0.2);
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+    }
+
+    .vision-card.full { grid-column: 1 / -1; }
+
+    .vision-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .vision-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .vision-card p {
+      font-size: 0.9rem;
+      color: var(--sage);
+    }
+
+    .vision-coming {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: rgba(200,149,96,0.12);
+      border: 1px solid rgba(200,149,96,0.3);
+      border-radius: 6px;
+      color: var(--sage);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .vision-coming strong { color: var(--gold); }
+
+    /* WHAT WE TEACH */
     #skills { background: var(--cream); }
 
     .skills-grid {
@@ -293,12 +333,9 @@
       margin-bottom: 0.35rem;
     }
 
-    .skill-card p {
-      font-size: 0.85rem;
-      color: var(--mid);
-    }
+    .skill-card p { font-size: 0.85rem; color: var(--mid); }
 
-    /* ── DONATE ── */
+    /* DONATE */
     #donate { background: var(--offwhite); }
 
     .donate-cards {
@@ -349,15 +386,10 @@
       color: var(--mid);
     }
 
-    .donate-note a {
-      color: var(--teal);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
+    .donate-note a { color: var(--teal); text-decoration: none; font-weight: 500; }
     .donate-note a:hover { text-decoration: underline; }
 
-    /* ── HELP ── */
+    /* HOW TO HELP */
     #help { background: var(--cream); }
 
     .help-grid {
@@ -385,14 +417,10 @@
 
     .help-card p { font-size: 0.9rem; color: var(--mid); }
 
-    /* ── CONTACT ── */
-    #contact {
-      background: var(--teal);
-      text-align: center;
-    }
-
+    /* CONTACT */
+    #contact { background: var(--teal); text-align: center; }
     #contact .section-title { color: #fff; }
-    #contact .section-eyebrow { color: var(--gold); }
+    #contact .eyebrow { color: var(--gold); }
 
     .contact-body {
       color: var(--sage);
@@ -415,25 +443,27 @@
     .contact-phone:hover { color: #fff; }
     .contact-name { font-size: 0.9rem; color: var(--sage); letter-spacing: 0.08em; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background: #0f2d38;
-      color: rgba(168,196,188,0.6);
+      color: rgba(168,196,188,0.55);
       text-align: center;
       padding: 1.5rem 2rem;
       font-size: 0.8rem;
     }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 680px) {
       .about-grid { grid-template-columns: 1fr; }
       .about-icon { max-width: 200px; margin: 0 auto; }
+      .vision-grid { grid-template-columns: 1fr; }
+      .vision-card.full { grid-column: auto; }
       .btn-outline { margin-left: 0; margin-top: 0.75rem; }
     }
 
     @media (max-width: 480px) {
       nav { padding: 0 1.25rem; }
-      .nav-links { gap: 1.25rem; }
+      .nav-links { gap: 1rem; }
       section { padding: 4rem 1.25rem; }
     }
   </style>
@@ -445,6 +475,7 @@
     <a class="nav-brand" href="#hero">1:1 Ministries</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#vision">The Vision</a></li>
       <li><a href="#skills">What We Teach</a></li>
       <li><a href="#donate">Give</a></li>
       <li><a href="#help">Help</a></li>
@@ -454,18 +485,18 @@
 
   <!-- HERO -->
   <section id="hero">
-    <p class="hero-eyebrow">Faith · Mentorship · Foster Youth</p>
-    <h1 class="hero-title">Nobody Should<br />Learn to <span>Adult</span><br />Alone.</h1>
-    <p class="hero-sub">Every year, thousands of foster youth turn 18 and the system walks away. 1:1 Ministries doesn't. We walk alongside them — teaching the life skills nobody ever taught them.</p>
+    <p class="hero-eyebrow">Faith · Housing · Life Skills · Foster Youth</p>
+    <h1 class="hero-title">A Home.<br />A Guide.<br /><span>A Future.</span></h1>
+    <p class="hero-sub">When foster youth age out of the system at 18, most face the world without a home, a safety net, or anyone to show them how to build a life. 1:1 Ministries is changing that — one person, one home, one future at a time.</p>
     <div class="hero-cta">
-      <a href="#donate" class="btn btn-primary">Support the Work</a>
-      <a href="#about" class="btn btn-outline">Our Story</a>
+      <a href="#vision" class="btn btn-primary">See the Vision</a>
+      <a href="#donate" class="btn btn-outline">Support the Work</a>
     </div>
   </section>
 
   <!-- STATS -->
   <div class="stat-strip">
-    <div class="container">
+    <div class="inner">
       <div class="stat-item">
         <div class="number">20,000+</div>
         <div class="label">foster youth age out every year in the U.S.</div>
@@ -479,8 +510,8 @@
         <div class="label">will be unemployed by age 24</div>
       </div>
       <div class="stat-item">
-        <div class="number">1:1</div>
-        <div class="label">the ratio that actually changes outcomes</div>
+        <div class="number">25</div>
+        <div class="label">tiny homes we're building to change that</div>
       </div>
     </div>
   </div>
@@ -491,15 +522,45 @@
       <div class="about-grid">
         <div class="about-icon">🌱</div>
         <div>
-          <p class="section-eyebrow">Who We Are</p>
-          <h2 class="section-title">The system has an exit. We don't.</h2>
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">The system has an exit date. We don't.</h2>
           <p class="section-body">
-            1:1 Ministries was founded by Diana with one conviction: no young person should have to figure out adulthood without someone in their corner. Foster youth aging out of the system face a cliff — no family safety net, no roadmap, no one to call when life gets complicated. We exist to be that someone. We mentor, we teach, we show up — one person to one person, for as long as it takes.
+            1:1 Ministries was founded by Diana and her husband with one conviction: no young person should be handed a birthday and called independent without the tools, the guidance, or the roof to back it up. We exist to fill the gap the foster system leaves behind — with housing, mentorship, and the practical life skills nobody ever taught these kids.
           </p>
-          <div class="about-stat">
-            "The system gave them a birthday and called it independence. We call it a starting line — and we'll be there." — Diana
+          <div class="about-quote">
+            "The system gave them a birthday and called it independence. We call it a starting line — and we'll be there at every step." — Diana
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section id="vision">
+    <div class="container">
+      <p class="eyebrow">The Vision</p>
+      <h2 class="section-title">25 tiny homes. One guidance center. A real foundation.</h2>
+      <p class="section-body">Diana and her husband are building something the foster system never offered: a physical place to land, surrounded by people who will walk with you as you learn to build your life.</p>
+
+      <div class="vision-grid">
+        <div class="vision-card">
+          <div class="vision-number">25</div>
+          <h3>Tiny Homes</h3>
+          <p>Safe, dignified, independent housing for foster youth transitioning out of the system. A real address. A real home.</p>
+        </div>
+        <div class="vision-card">
+          <div class="vision-number">1</div>
+          <h3>Guidance Center</h3>
+          <p>An on-site hub for life skills workshops, one-on-one mentorship, job readiness, and community — everything a support system provides.</p>
+        </div>
+        <div class="vision-card full">
+          <h3>Why This Model Works</h3>
+          <p>Housing alone doesn't build a life. Mentorship without stability doesn't stick. The 1:1 model combines both — giving young adults a safe place to live <em>and</em> the daily guidance to figure out what comes next. The goal isn't dependency. It's launching people into full, independent lives with the foundation they never got.</p>
+        </div>
+      </div>
+
+      <div class="vision-coming">
+        <strong>Full development plan coming soon.</strong> Diana and her husband are finalizing the details. Want to be part of the ground floor? <a href="#contact" style="color: var(--gold); text-decoration: underline;">Get in touch.</a>
       </div>
     </div>
   </section>
@@ -507,50 +568,50 @@
   <!-- WHAT WE TEACH -->
   <section id="skills">
     <div class="container">
-      <p class="section-eyebrow">What We Teach</p>
-      <h2 class="section-title">The things most of us learned at home.</h2>
-      <p class="section-body">Foster youth age out knowing how to survive the system. We teach them how to thrive outside it — the real-world skills that no one covered in school.</p>
+      <p class="eyebrow">What We Teach</p>
+      <h2 class="section-title">How to adult — for real.</h2>
+      <p class="section-body">Most people learned these things growing up, from family. Foster youth often didn't. Our guidance center covers the full picture of independent adult life.</p>
 
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon">💰</div>
           <h3>Money & Budgeting</h3>
-          <p>Opening a bank account, building credit, paying bills, avoiding debt traps.</p>
+          <p>Bank accounts, building credit, paying bills on time, avoiding predatory debt.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🏠</div>
-          <h3>Finding Housing</h3>
-          <p>How to rent an apartment, understand a lease, and know your rights as a tenant.</p>
+          <h3>Housing</h3>
+          <p>How to rent, understand a lease, pay utilities, and know your rights as a tenant.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">💼</div>
-          <h3>Getting a Job</h3>
-          <p>Résumés, interviews, workplace expectations — and how to keep the job once you have it.</p>
+          <h3>Employment</h3>
+          <p>Résumés, interviews, workplace expectations — and keeping a job once you have it.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🏥</div>
-          <h3>Healthcare Navigation</h3>
-          <p>Insurance basics, how to make a doctor's appointment, and when to use the ER vs. urgent care.</p>
+          <h3>Healthcare</h3>
+          <p>Insurance basics, making appointments, navigating prescriptions and mental health.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🍳</div>
           <h3>Food & Cooking</h3>
-          <p>Meal planning, grocery shopping on a budget, and basic cooking that doesn't require a culinary degree.</p>
+          <p>Grocery shopping on a budget, meal planning, and basic cooking that keeps you fed.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">📋</div>
           <h3>Life Admin</h3>
-          <p>Taxes, IDs, benefits, government paperwork — navigating the bureaucracy of being an adult.</p>
+          <p>Taxes, IDs, benefits enrollment, paperwork — all the bureaucracy of being an adult.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🤝</div>
-          <h3>Relationships & Conflict</h3>
-          <p>Healthy communication, setting boundaries, and building a support network that lasts.</p>
+          <h3>Relationships</h3>
+          <p>Healthy communication, boundaries, conflict resolution, and building a real support network.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🙏</div>
           <h3>Faith & Purpose</h3>
-          <p>Rooted in faith, open to all. We walk with young people as they discover who they are and what they're here for.</p>
+          <p>Rooted in faith, open to all. We walk with young people as they discover who they are.</p>
         </div>
       </div>
     </div>
@@ -559,14 +620,14 @@
   <!-- DONATE -->
   <section id="donate">
     <div class="container">
-      <p class="section-eyebrow">Give</p>
-      <h2 class="section-title">Invest in someone's first chapter.</h2>
-      <p class="section-body">Your gift directly funds mentorship time, resources, and the practical tools foster youth need to build a stable, independent life.</p>
+      <p class="eyebrow">Give</p>
+      <h2 class="section-title">Help us build what they never had.</h2>
+      <p class="section-body">Every dollar goes toward housing, mentorship, and life skills resources for foster youth stepping into adulthood alone. Your gift is the foundation under their first steps.</p>
 
       <div class="donate-cards">
         <div class="donate-card">
           <div class="amount">$25</div>
-          <div class="impact">Covers workbooks and supplies for one life skills session</div>
+          <div class="impact">Covers supplies for one life skills workshop session</div>
           <a href="tel:9088874005" class="btn btn-primary" style="width:100%">Give $25</a>
         </div>
         <div class="donate-card featured">
@@ -582,8 +643,8 @@
       </div>
 
       <p class="donate-note">
-        Want to give a custom amount, set up recurring giving, or donate goods?<br />
-        Call or text Diana directly at <a href="tel:9088874005">(908) 887-4005</a> — she'll make it easy.
+        Want to give a custom amount, set up recurring giving, or contribute toward the tiny homes project?<br />
+        Call or text Diana at <a href="tel:9088874005">(908) 887-4005</a> — she'll make it simple.
       </p>
     </div>
   </section>
@@ -591,40 +652,40 @@
   <!-- HOW TO HELP -->
   <section id="help">
     <div class="container">
-      <p class="section-eyebrow">How to Help</p>
-      <h2 class="section-title">You don't have to be a professional to change a life.</h2>
-      <p class="section-body">There's more than one way to show up for a young person who has never had someone in their corner. Find yours.</p>
+      <p class="eyebrow">How to Help</p>
+      <h2 class="section-title">There's a place for you in this work.</h2>
+      <p class="section-body">Whether you give time, money, skills, or prayer — every contribution helps build something that doesn't exist anywhere near enough: a real landing place for young people the system left behind.</p>
 
       <div class="help-grid">
         <div class="help-card">
           <div class="help-icon">💛</div>
           <h3>Become a Mentor</h3>
-          <p>Be the one consistent adult in someone's life. No special credentials required — just reliability, patience, and a willingness to show up.</p>
+          <p>Be a consistent adult presence in someone's life. No credentials required — just reliability and a willingness to show up.</p>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🏡</div>
+          <h3>Support the Build</h3>
+          <p>We're raising funds to break ground on 25 tiny homes and a guidance center. Every contribution gets us closer.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">🎓</div>
           <h3>Share Your Expertise</h3>
-          <p>Are you in finance, HR, healthcare, or trades? Teach a workshop. Your everyday knowledge is transformative to someone starting from zero.</p>
+          <p>Finance, trades, HR, healthcare, cooking — your everyday knowledge is transformational to someone starting from zero.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">📦</div>
           <h3>Donate Goods</h3>
-          <p>Household basics, work clothes, kitchen supplies, hygiene products. The things you take for granted are often the things they've never had.</p>
-        </div>
-        <div class="help-card">
-          <div class="help-icon">💰</div>
-          <h3>Give Financially</h3>
-          <p>Every dollar funds mentorship, materials, and emergency support. Direct, transparent, and all going to the work.</p>
+          <p>Household basics, work clothes, kitchen supplies, hygiene products. The things most people take for granted.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">📣</div>
           <h3>Spread the Word</h3>
-          <p>Tell someone. Share this page. The biggest barrier to these young people getting help is that most people don't know this gap exists.</p>
+          <p>Most people don't know this gap exists. Tell someone. Share this page. Awareness is the first step toward change.</p>
         </div>
         <div class="help-card">
           <div class="help-icon">🙏</div>
           <h3>Pray With Us</h3>
-          <p>We believe prayer is foundational. Lift up the young people navigating the hardest transition of their lives — and the community walking with them.</p>
+          <p>Lift up the young people navigating the hardest transition of their lives — and the community being built around them.</p>
         </div>
       </div>
     </div>
@@ -633,9 +694,9 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <p class="section-eyebrow">Get In Touch</p>
-      <h2 class="section-title">Ready to get involved?</h2>
-      <p class="contact-body">Whether you want to give, mentor, volunteer, or just learn more — Diana would love to talk. Reach out directly.</p>
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="section-title">Let's talk.</h2>
+      <p class="contact-body">Whether you want to give, mentor, volunteer, partner on the build, or simply learn more — Diana would love to hear from you.</p>
       <a href="tel:9088874005" class="contact-phone">(908) 887-4005</a>
       <p class="contact-name">Diana · 1:1 Ministries</p>
     </div>
@@ -643,7 +704,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 1:1 Ministries. All rights reserved. Walking alongside foster youth, one relationship at a time.</p>
+    <p>© 2026 1:1 Ministries. All rights reserved. Building homes, restoring futures — one relationship at a time.</p>
   </footer>
 
 </body>
